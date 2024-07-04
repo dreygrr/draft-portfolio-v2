@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray3: #666;
+  --dark-gray3: #2d2d2d;
+}
+
+h1 {
+  font-size: 30rem;
+  font-weight: 900;
+  letter-spacing: -2rem;
+  scale: 1 0.85;
+}
+
+h2 {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  scale: 1 0.85;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.15rem;
+}
+
+body {
+  background-color: var(--dark-gray3);
+  color: var(--white);
+}
+
+.block {
+  padding: 5em;
+}
+@media (min-width: 1280px) {
+  .block {
+    width: 66%;
+    margin: auto;
+  }
+}
+.block .content p {
+  line-height: 2rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    top: 50%;
+    animation-timing-function: cubic-bezier(0.92, 0, 0.88, 0.48);
+    box-shadow: 0 25px 250px 25px var(--dark-gray3);
+  }
+  45%, 55% {
+    scale: 1 1.1;
+  }
+  50% {
+    scale: 1 0.7;
+    top: 100%;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    box-shadow: 0 250px 500px 50px var(--dark-gray3);
+  }
+}
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(0deg, var(--dark-gray3) 0, var(--gray3) 100%);
+}
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: calc(100% - 10rem);
+  opacity: 0.1;
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  border-radius: 100%;
+  background-color: var(--gray3);
+  box-shadow: 0 25px 50px 0 var(--dark-gray3);
+  animation: bounce 2s ease infinite;
+}
+
+.block .card {
+  display: block;
+  background-color: var(--gray3);
+}/*# sourceMappingURL=home.css.map */
