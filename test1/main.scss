@@ -17,9 +17,15 @@
     top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
 
+
 @mixin doFlex($flex_direction, $justify_content, $align_items, $gap) {
     display: flex;
     flex-direction: $flex_direction; justify-content: $justify_content; align-items: $align_items; gap: $gap;
+}
+
+
+@mixin simpleFlexCenter() {
+    display: flex; justify-content: center; align-items: center;
 }
 
 
@@ -28,7 +34,7 @@ h1 {
     scale: 1 .85;
 }
 h2 {
-    font-size: 4rem; letter-spacing: -.2rem;
+    font-size: 4rem; letter-spacing: -.2rem; line-height: 3rem;
     scale: 1 .85;
 }
 
@@ -47,13 +53,19 @@ body {
 
 
 .block {
+    @include doFlex(column, center, start, 1.5em);
     @media (min-width: 1280px) {
         width: 66%; margin: auto;
     }
 
-    padding: 5em;
+    padding: 3em 1em;
 
-    .content p {
+    .content, .intro-text {
+        @include doFlex(column, center, start, 1.5em);
+    }
+
+
+    p {
         line-height: 2rem;
     }
 }

@@ -1,0 +1,30 @@
+@import '../../main';
+
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    mix-blend-mode: difference;
+
+    
+    .nav {
+        @include doFlex(row, space-between, center, unset);
+        padding: 1em;
+        
+        a {
+            color: var(--white);
+            text-decoration: none;
+
+            &.option {
+                @include simpleFlexCenter();
+                min-width: 50px; max-width: 50px;
+                min-height: 50px; max-height: 50px;
+                i {font-size: 1.75rem;}
+
+            }
+        }
+    
+    
+        h1 {font-style: italic; font-size: 2rem; font-weight: 100; letter-spacing: -.1rem;}
+    }
+}

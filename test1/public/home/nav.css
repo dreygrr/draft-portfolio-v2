@@ -56,4 +56,41 @@ body {
 }
 .block p {
   line-height: 2rem;
-}/*# sourceMappingURL=main.css.map */
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+nav .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: unset;
+  padding: 1em;
+}
+nav .nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+nav .nav a.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+}
+nav .nav a.option i {
+  font-size: 1.75rem;
+}
+nav .nav h1 {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: -0.1rem;
+}/*# sourceMappingURL=nav.css.map */
